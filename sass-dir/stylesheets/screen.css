@@ -1,0 +1,171 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../usr/local/lib/ruby/gems/2.4.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: Jaapokki;
+  src: url("../../fonts/Jaapokki-Regular.otf"), url("/fonts/Jaapokki-Regular.otf");
+}
+@keyframes flyInFromTopLeft {
+  0% {
+    transform: translateX(-6em) translateY(-6em);
+  }
+  70% {
+    transform: translateX(0.1em) translateY(0.1em);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes flyInFromBottomLeft {
+  0% {
+    transform: translateX(-6em) translateY(6em);
+  }
+  70% {
+    transform: translateX(0.1em) translateY(-0.1em);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes flyInFromBottomRight {
+  0% {
+    transform: translateX(10em) translateY(10em);
+  }
+  70% {
+    transform: translateX(-0.1em) translateY(-0.1em);
+  }
+  100% {
+    transform: none;
+  }
+}
+/*$orange-light: #FF9D61;
+$orange-dark: #ff8d48;*/
+/* line 92, ../sass/screen.scss */
+body {
+  color: white;
+}
+
+/* line 96, ../sass/screen.scss */
+.panel {
+  padding: 100px;
+  text-align: center;
+  overflow: hidden;
+  background-color: transparent;
+  color: white;
+  margin: 0;
+  font: 100px Jaapokki;
+  border-radius: 0;
+  /*:hover {
+    left: -20px;
+    top: -20px;
+  }*/
+}
+/* line 111, ../sass/screen.scss */
+.panel img {
+  margin-top: 40px;
+  width: 18vw;
+}
+
+/* line 117, ../sass/screen.scss */
+#panel1 {
+  background-color: #FA8072;
+}
+/* line 120, ../sass/screen.scss */
+#panel1 h1 {
+  font-size: 140px;
+  animation: flyInFromBottomRight 3s;
+  text-shadow: 2.82843px 2.82843px 0 #f96a59, 5.65685px 5.65685px 0 #f96a5a, 8.48528px 8.48528px 0 #f96b5a, 11.31371px 11.31371px 0 #f96b5a, 14.14214px 14.14214px 0 #f96b5a, 16.97056px 16.97056px 0 #f96b5b, 19.79899px 19.79899px 0 #f96c5b, 22.62742px 22.62742px 0 #f96c5b, 25.45584px 25.45584px 0 #f96c5b, 28.28427px 28.28427px 0 #f96c5c, 31.1127px 31.1127px 0 #f96c5c, 33.94113px 33.94113px 0 #f96d5c, 36.76955px 36.76955px 0 #f96d5c, 39.59798px 39.59798px 0 #f96d5d, 42.42641px 42.42641px 0 #f96d5d, 45.25483px 45.25483px 0 #f96e5d, 48.08326px 48.08326px 0 #f96e5d, 50.91169px 50.91169px 0 #f96e5e, 53.74012px 53.74012px 0 #f96e5e, 56.56854px 56.56854px 0 #f96e5e, 59.39697px 59.39697px 0 #f96f5e, 62.2254px 62.2254px 0 #f96f5f, 65.05382px 65.05382px 0 #f96f5f, 67.88225px 67.88225px 0 #f96f5f, 70.71068px 70.71068px 0 #f9705f, 73.53911px 73.53911px 0 #f97060, 76.36753px 76.36753px 0 #f97060, 79.19596px 79.19596px 0 #f97060, 82.02439px 82.02439px 0 #f97060, 84.85281px 84.85281px 0 #f97161, 87.68124px 87.68124px 0 #f97161, 90.50967px 90.50967px 0 #f97161, 93.3381px 93.3381px 0 #f97161, 96.16652px 96.16652px 0 #f97162, 98.99495px 98.99495px 0 #f97262, 101.82338px 101.82338px 0 #f97262, 104.6518px 104.6518px 0 #f97262, 107.48023px 107.48023px 0 #f97263, 110.30866px 110.30866px 0 #f97363, 113.13708px 113.13708px 0 #f97363, 115.96551px 115.96551px 0 #f97363, 118.79394px 118.79394px 0 #f97364, 121.62237px 121.62237px 0 #f97364, 124.45079px 124.45079px 0 #f97464, 127.27922px 127.27922px 0 #f97464, 130.10765px 130.10765px 0 #f97465, 132.93607px 132.93607px 0 #f97465, 135.7645px 135.7645px 0 #f97565, 138.59293px 138.59293px 0 #f97565, 141.42136px 141.42136px 0 #fa7566, 144.24978px 144.24978px 0 #fa7566, 147.07821px 147.07821px 0 #fa7566, 149.90664px 149.90664px 0 #fa7666, 152.73506px 152.73506px 0 #fa7667, 155.56349px 155.56349px 0 #fa7667, 158.39192px 158.39192px 0 #fa7667, 161.22035px 161.22035px 0 #fa7767, 164.04877px 164.04877px 0 #fa7768, 166.8772px 166.8772px 0 #fa7768, 169.70563px 169.70563px 0 #fa7768, 172.53405px 172.53405px 0 #fa7768, 175.36248px 175.36248px 0 #fa7869, 178.19091px 178.19091px 0 #fa7869, 181.01934px 181.01934px 0 #fa7869, 183.84776px 183.84776px 0 #fa7869, 186.67619px 186.67619px 0 #fa796a, 189.50462px 189.50462px 0 #fa796a, 192.33304px 192.33304px 0 #fa796a, 195.16147px 195.16147px 0 #fa796a, 197.9899px 197.9899px 0 #fa796b, 200.81833px 200.81833px 0 #fa7a6b, 203.64675px 203.64675px 0 #fa7a6b, 206.47518px 206.47518px 0 #fa7a6b, 209.30361px 209.30361px 0 #fa7a6c, 212.13203px 212.13203px 0 #fa7b6c, 214.96046px 214.96046px 0 #fa7b6c, 217.78889px 217.78889px 0 #fa7b6c, 220.61732px 220.61732px 0 #fa7b6d, 223.44574px 223.44574px 0 #fa7b6d, 226.27417px 226.27417px 0 #fa7c6d, 229.1026px 229.1026px 0 #fa7c6d, 231.93102px 231.93102px 0 #fa7c6e, 234.75945px 234.75945px 0 #fa7c6e, 237.58788px 237.58788px 0 #fa7c6e, 240.41631px 240.41631px 0 #fa7d6e, 243.24473px 243.24473px 0 #fa7d6f, 246.07316px 246.07316px 0 #fa7d6f, 248.90159px 248.90159px 0 #fa7d6f, 251.73001px 251.73001px 0 #fa7e6f, 254.55844px 254.55844px 0 #fa7e70, 257.38687px 257.38687px 0 #fa7e70, 260.2153px 260.2153px 0 #fa7e70, 263.04372px 263.04372px 0 #fa7e70, 265.87215px 265.87215px 0 #fa7f71, 268.70058px 268.70058px 0 #fa7f71, 271.529px 271.529px 0 #fa7f71, 274.35743px 274.35743px 0 #fa7f71, 277.18586px 277.18586px 0 salmon, 280.01429px 280.01429px 0 salmon, 282.84271px 282.84271px 0 salmon;
+}
+/* line 126, ../sass/screen.scss */
+#panel1 h2 {
+  font-size: 60px;
+}
+
+/* line 131, ../sass/screen.scss */
+#panel2 {
+  background-color: #72a8fa;
+}
+/* line 134, ../sass/screen.scss */
+#panel2 h1 {
+  font-size: 120px;
+  animation: flyInFromBottomLeft 3s;
+  text-shadow: -5.65685px 5.65685px 0 #5999f9, -11.31371px 11.31371px 0 #5a99f9, -16.97056px 16.97056px 0 #5a99f9, -22.62742px 22.62742px 0 #5a9af9, -28.28427px 28.28427px 0 #5a9af9, -33.94113px 33.94113px 0 #5b9af9, -39.59798px 39.59798px 0 #5b9af9, -45.25483px 45.25483px 0 #5b9af9, -50.91169px 50.91169px 0 #5b9af9, -56.56854px 56.56854px 0 #5c9bf9, -62.2254px 62.2254px 0 #5c9bf9, -67.88225px 67.88225px 0 #5c9bf9, -73.53911px 73.53911px 0 #5c9bf9, -79.19596px 79.19596px 0 #5d9bf9, -84.85281px 84.85281px 0 #5d9bf9, -90.50967px 90.50967px 0 #5d9bf9, -96.16652px 96.16652px 0 #5d9cf9, -101.82338px 101.82338px 0 #5e9cf9, -107.48023px 107.48023px 0 #5e9cf9, -113.13708px 113.13708px 0 #5e9cf9, -118.79394px 118.79394px 0 #5e9cf9, -124.45079px 124.45079px 0 #5f9cf9, -130.10765px 130.10765px 0 #5f9cf9, -135.7645px 135.7645px 0 #5f9df9, -141.42136px 141.42136px 0 #5f9df9, -147.07821px 147.07821px 0 #609df9, -152.73506px 152.73506px 0 #609df9, -158.39192px 158.39192px 0 #609df9, -164.04877px 164.04877px 0 #609df9, -169.70563px 169.70563px 0 #619ef9, -175.36248px 175.36248px 0 #619ef9, -181.01934px 181.01934px 0 #619ef9, -186.67619px 186.67619px 0 #619ef9, -192.33304px 192.33304px 0 #629ef9, -197.9899px 197.9899px 0 #629ef9, -203.64675px 203.64675px 0 #629ef9, -209.30361px 209.30361px 0 #629ff9, -214.96046px 214.96046px 0 #639ff9, -220.61732px 220.61732px 0 #639ff9, -226.27417px 226.27417px 0 #639ff9, -231.93102px 231.93102px 0 #639ff9, -237.58788px 237.58788px 0 #649ff9, -243.24473px 243.24473px 0 #649ff9, -248.90159px 248.90159px 0 #64a0f9, -254.55844px 254.55844px 0 #64a0f9, -260.2153px 260.2153px 0 #65a0f9, -265.87215px 265.87215px 0 #65a0f9, -271.529px 271.529px 0 #65a0f9, -277.18586px 277.18586px 0 #65a0f9, -282.84271px 282.84271px 0 #66a1fa, -288.49957px 288.49957px 0 #66a1fa, -294.15642px 294.15642px 0 #66a1fa, -299.81328px 299.81328px 0 #66a1fa, -305.47013px 305.47013px 0 #67a1fa, -311.12698px 311.12698px 0 #67a1fa, -316.78384px 316.78384px 0 #67a1fa, -322.44069px 322.44069px 0 #67a2fa, -328.09755px 328.09755px 0 #68a2fa, -333.7544px 333.7544px 0 #68a2fa, -339.41125px 339.41125px 0 #68a2fa, -345.06811px 345.06811px 0 #68a2fa, -350.72496px 350.72496px 0 #69a2fa, -356.38182px 356.38182px 0 #69a2fa, -362.03867px 362.03867px 0 #69a3fa, -367.69553px 367.69553px 0 #69a3fa, -373.35238px 373.35238px 0 #6aa3fa, -379.00923px 379.00923px 0 #6aa3fa, -384.66609px 384.66609px 0 #6aa3fa, -390.32294px 390.32294px 0 #6aa3fa, -395.9798px 395.9798px 0 #6ba4fa, -401.63665px 401.63665px 0 #6ba4fa, -407.29351px 407.29351px 0 #6ba4fa, -412.95036px 412.95036px 0 #6ba4fa, -418.60721px 418.60721px 0 #6ca4fa, -424.26407px 424.26407px 0 #6ca4fa, -429.92092px 429.92092px 0 #6ca4fa, -435.57778px 435.57778px 0 #6ca5fa, -441.23463px 441.23463px 0 #6da5fa, -446.89149px 446.89149px 0 #6da5fa, -452.54834px 452.54834px 0 #6da5fa, -458.20519px 458.20519px 0 #6da5fa, -463.86205px 463.86205px 0 #6ea5fa, -469.5189px 469.5189px 0 #6ea5fa, -475.17576px 475.17576px 0 #6ea6fa, -480.83261px 480.83261px 0 #6ea6fa, -486.48947px 486.48947px 0 #6fa6fa, -492.14632px 492.14632px 0 #6fa6fa, -497.80317px 497.80317px 0 #6fa6fa, -503.46003px 503.46003px 0 #6fa6fa, -509.11688px 509.11688px 0 #70a7fa, -514.77374px 514.77374px 0 #70a7fa, -520.43059px 520.43059px 0 #70a7fa, -526.08745px 526.08745px 0 #70a7fa, -531.7443px 531.7443px 0 #71a7fa, -537.40115px 537.40115px 0 #71a7fa, -543.05801px 543.05801px 0 #71a7fa, -548.71486px 548.71486px 0 #71a8fa, -554.37172px 554.37172px 0 #72a8fa, -560.02857px 560.02857px 0 #72a8fa, -565.68542px 565.68542px 0 #72a8fa;
+}
+/* line 140, ../sass/screen.scss */
+#panel2 h2 {
+  font-size: 80px;
+}
+/* line 144, ../sass/screen.scss */
+#panel2 h3 {
+  font: 24px Montserrat;
+}
+/* line 148, ../sass/screen.scss */
+#panel2 span {
+  font-weight: bold;
+}
