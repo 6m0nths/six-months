@@ -1,0 +1,116 @@
+// @import "compass/css3"
+
+@font-face {
+  font-family: Jaapokki;
+  src: url('fonts/Jaapokki-Regular.otf'), url('/fonts/Jaapokki-Regular.otf');
+}
+
+@font-face {
+  font-family: Metrophobic;
+  src: url('fonts/Metrophobic.otf'), url('/fonts/Metrophobic.otf');
+}
+
+/*@function makelongshadow($color, $x, $y) {
+  $val: 0px 0px $color;
+  @for $i from 1 through 300 {
+    $val: #{$val}, #{$i * $x}px #{$i * $y}px #{$color};
+  }
+  @return $val;
+}
+
+@mixin longshadow($color, $x, $y) {
+  text-shadow: makelongshadow($color, $x, $y);
+}*/
+
+@function long-shadow($direction, $length, $color, $fade: false, $shadow-count: 100) {
+  $shadows: ();
+  $conversion-map: (
+    to top: 180deg,
+    to top right: 135deg,
+    to right top: 135deg,
+    to right: 90deg,
+    to bottom right: 45deg,
+    to right bottom: 45deg,
+    to bottom: 0deg,
+    to bottom left: 315deg,
+    to left bottom: 315deg,
+    to left: 270deg,
+    to left top: 225deg,
+    to top left: 225deg
+  );
+
+  @if map-has-key($conversion-map, $direction) {
+    $direction: map-get($conversion-map, $direction);
+  }
+
+  @for $i from 1 through $shadow-count {
+    $current-step: ($i * $length / $shadow-count);
+    $current-color: if(not $fade, $color, if(type-of($fade) == 'color',  mix($fade, $color, ($i / $shadow-count * 100)), rgba($color, 1 - $i / $shadow-count)));
+
+    $shadows: append($shadows, (sin(0deg + $direction) * $current-step) (cos(0deg + $direction) * $current-step) 0 $current-color, 'comma');
+  }
+
+  @return $shadows;
+}
+
+@keyframes flyInFromTopLeft {
+  0% {
+    transform: translateX(-6em) translateY(-6em);
+  }
+  70% {
+    transform: translateX(.1em) translateY(.1em);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes flyInFromBottomRight {
+  0% {
+    transform: translateX(10em) translateY(10em);
+  }
+  70% {
+    transform: translateX(-.1em) translateY(-.1em);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+$pink-light: #FA8072;
+$pink-dark: #f73d28;
+
+body {
+  color: white;
+}
+#main-panel {
+  height: 100vh;
+}
+
+.panel {
+  padding: 100px;
+  text-align: center;
+  overflow: hidden;
+  background-color: $pink-light;
+  color: white;
+  font-family: Jaapokki;
+  border-radius: 0;
+
+  h1 {
+    font-size: 240px;
+    // @include longshadow(lighten($pink-dark, 10%), -1, -1);
+    animation: flyInFromTopLeft 3s;
+    text-shadow: long-shadow($direction: to bottom right, $length: 100px, $color: lighten($pink-dark, 10%), $fade: lighten($pink-dark, 10%));
+  }
+
+  h2 {
+    font-size: 50px;
+    // @include longshadow(lighten($pink-dark, 10%), 1, 1);
+    animation: flyInFromBottomRight 3s;
+  }
+
+  /*:hover {
+    left: -20px;
+    top: -20px;
+  }*/
+}
